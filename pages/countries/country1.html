@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>France - Wiki Project</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.4.0/purify.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><a href="../../index.html">Wiki Project</a></h1>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Countries</a>
+                        <div class="dropdown-content">
+                            <a href="country1.html">France</a>
+                            <a href="country2.html">Japan</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Meta</a>
+                        <div class="dropdown-content">
+                            <a href="../meta/rules.html">Rules</a>
+                            <a href="../meta/about.html">About</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="wiki-content">
+            <button class="edit-button" onclick="toggleEditMode()">Edit Page</button>
+            
+            <!-- View Mode -->
+            <div id="view-mode">
+                <h1 id="title" class="wiki-title">France</h1>
+                <h2 id="subtitle1" class="wiki-subtitle">Geography and Demographics</h2>
+                <h2 id="subtitle2" class="wiki-subtitle">History and Culture</h2>
+                
+                <div id="image-container">
+                    <img id="image" src="https://via.placeholder.com/800x400" alt="Map of France" class="wiki-image">
+                </div>
+                
+                <div id="table-container">
+                    <table id="table" class="wiki-table">
+                        <thead>
+                            <tr>
+                                <th>Attribute</th>
+                                <th>Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Capital</td>
+                                <td>Paris</td>
+                            </tr>
+                            <tr>
+                                <td>Official Language</td>
+                                <td>French</td>
+                            </tr>
+                            <tr>
+                                <td>Population</td>
+                                <td>67.5 million (2024)</td>
+                            </tr>
+                            <tr>
+                                <td>Currency</td>
+                                <td>Euro (€)</td>
+                            </tr>
+                            <tr>
+                                <td>Government</td>
+                                <td>Unitary semi-presidential republic</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div id="body" class="wiki-body">
+                    <p>France, officially the French Republic, is a country located in Western Europe. It shares borders with Belgium, Luxembourg, Germany, Switzerland, Italy, Monaco, Andorra, and Spain. France also has overseas territories across the world.</p>
+                    
+                    <h3>Geography</h3>
+                    <p>France features diverse landscapes, from coastal plains to mountain ranges such as the Alps, Pyrenees, and Massif Central. The country has a varied climate, from the cool and wet oceanic climate of the west to the warm Mediterranean climate of the southeast.</p>
+                    
+                    <h3>Culture</h3>
+                    <p>France has a rich cultural heritage and is known for its contributions to art, literature, philosophy, fashion, and cuisine. Paris, the capital, is renowned for landmarks such as the Eiffel Tower, the Louvre Museum, and Notre-Dame Cathedral.</p>
+                    
+                    <h3>Economy</h3>
+                    <p>France has one of the largest economies in the world and is a member of the European Union. Key industries include tourism, manufacturing, agriculture, and luxury goods.</p>
+                </div>
+            </div>
+            
+            <!-- Edit Mode -->
+            <div id="edit-mode" class="edit-section">
+                <h3>Edit Page Content</h3>
+                
+                <label for="edit-title">Title:</label>
+                <input type="text" id="edit-title" class="edit-field" value="France">
+                
+                <label for="edit-subtitle1">Subtitle 1:</label>
+                <input type="text" id="edit-subtitle1" class="edit-field" value="Geography and Demographics">
+                
+                <label for="edit-subtitle2">Subtitle 2:</label>
+                <input type="text" id="edit-subtitle2" class="edit-field" value="History and Culture">
+                
+                <label for="edit-image">Image URL:</label>
+                <input type="text" id="edit-image" class="edit-field" value="https://via.placeholder.com/800x400">
+                
+                <label for="edit-table">Table (HTML):</label>
+                <textarea id="edit-table" class="edit-field">
+<table>
+    <thead>
+        <tr>
+            <th>Attribute</th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Capital</td>
+            <td>Paris</td>
+        </tr>
+        <tr>
+            <td>Official Language</td>
+            <td>French</td>
+        </tr>
+        <tr>
+            <td>Population</td>
+            <td>67.5 million (2024)</td>
+        </tr>
+        <tr>
+            <td>Currency</td>
+            <td>Euro (€)</td>
+        </tr>
+        <tr>
+            <td>Government</td>
+            <td>Unitary semi-presidential republic</td>
+        </tr>
+    </tbody>
+</table>
+                </textarea>
+                
+                <label for="edit-body">Body (Markdown):</label>
+                <textarea id="edit-body" class="edit-field">
+France, officially the French Republic, is a country located in Western Europe. It shares borders with Belgium, Luxembourg, Germany, Switzerland, Italy, Monaco, Andorra, and Spain. France also has overseas territories across the world.
+
+### Geography
+France features diverse landscapes, from coastal plains to mountain ranges such as the Alps, Pyrenees, and Massif Central. The country has a varied climate, from the cool and wet oceanic climate of the west to the warm Mediterranean climate of the southeast.
+
+### Culture
+France has a rich cultural heritage and is known for its contributions to art, literature, philosophy, fashion, and cuisine. Paris, the capital, is renowned for landmarks such as the Eiffel Tower, the Louvre Museum, and Notre-Dame Cathedral.
+
+### Economy
+France has one of the largest economies in the world and is a member of the European Union. Key industries include tourism, manufacturing, agriculture, and luxury goods.
+                </textarea>
+                
+                <button class="save-button" onclick="saveChanges()">Save Changes</button>
+                <button class="cancel-button" onclick="cancelEdit()">Cancel</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Wiki Project. All content available under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> unless otherwise noted.</p>
+        </footer>
+    </div>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/wiki-page.js"></script>
+</body>
+</html>
