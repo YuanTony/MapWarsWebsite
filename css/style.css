@@ -20,7 +20,7 @@ body {
 
 /* Header and Navigation */
 header {
-    background-color: #f5f5dc; /* Light beige color */
+    background-color: #FFF;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 1rem 0;
     margin-bottom: 2rem;
@@ -83,7 +83,7 @@ nav a:hover {
 
 /* Main Content */
 main {
-    background-color: #f5f5dc; /* Light beige color */
+    background-color: #FFF;
     padding: 2rem;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
