@@ -1,107 +1,104 @@
 // Initialize the page when loaded
 document.addEventListener('DOMContentLoaded', function() {
-    // Load content from localStorage if available
-    loadContentFromStorage();
+    // Load content from the server
+    loadContentFromServer();
 });
 
-// Toggle between view and edit modes
-function toggleEditMode() {
-    const viewMode = document.getElementById('view-mode');
-    const editMode = document.getElementById('edit-mode');
-    
-    if (viewMode.style.display === 'none') {
-        viewMode.style.display = 'block';
-        editMode.style.display = 'none';
-    } else {
-        viewMode.style.display = 'none';
-        editMode.style.display = 'block';
-        
-        // Fill edit fields with current content
-        document.getElementById('edit-title').value = document.getElementById('title').textContent;
-        document.getElementById('edit-subtitle1').value = document.getElementById('subtitle1').textContent;
-        document.getElementById('edit-subtitle2').value = document.getElementById('subtitle2').textContent;
-        document.getElementById('edit-image').value = document.getElementById('image').src;
-        
-        // Get table HTML
-        const tableHTML = document.getElementById('table-container').innerHTML;
-        document.getElementById('edit-table').value = tableHTML;
-        
-        // Get body content
-        const bodyContent = document.getElementById('body').innerHTML;
-        // Try to convert HTML back to Markdown (simplified approach)
-        // This is a basic approach - a real implementation would use a HTML-to-Markdown converter
-        document.getElementById('edit-body').value = bodyContent.replace(/<p>/g, '').replace(/<\/p>/g, '\n\n').trim();
-    }
-}
-
-// Save changes to localStorage and update the view
-function saveChanges() {
-    // Get values from edit fields
-    const title = document.getElementById('edit-title').value;
-    const subtitle1 = document.getElementById('edit-subtitle1').value;
-    const subtitle2 = document.getElementById('edit-subtitle2').value;
-    const imageUrl = document.getElementById('edit-image').value;
-    const tableHTML = document.getElementById('edit-table').value;
-    const bodyMarkdown = document.getElementById('edit-body').value;
-    
-    // Update the view
-    document.getElementById('title').textContent = title;
-    document.getElementById('subtitle1').textContent = subtitle1;
-    document.getElementById('subtitle2').textContent = subtitle2;
-    document.getElementById('image').src = imageUrl;
-    
-    // Update table (with sanitization)
-    document.getElementById('table-container').innerHTML = DOMPurify.sanitize(tableHTML);
-    
-    // Convert Markdown to HTML for the body
-    const bodyHTML = DOMPurify.sanitize(marked.parse(bodyMarkdown));
-    document.getElementById('body').innerHTML = bodyHTML;
-    
-    // Save to localStorage
+// Load content from a markdown file on the server
+function loadContentFromServer() {
     const pageUrl = window.location.pathname;
-    const pageData = {
-        title: title,
-        subtitle1: subtitle1,
-        subtitle2: subtitle2,
-        imageUrl: imageUrl,
-        tableHTML: tableHTML,
-        bodyMarkdown: bodyMarkdown
-    };
+    // Extract the page name from the URL (e.g., "country1" from "/pages/countries/country1.html")
+    const pageName = pageUrl.split('/').pop().replace('.html', '');
     
-    localStorage.setItem('wiki_page_' + pageUrl, JSON.stringify(pageData));
+    // Construct the path to the markdown file (assuming it's in a "content" folder)
+    const markdownPath = `../../content/${pageName}.md`;
     
-    // Update document title
-    document.title = title + ' - Wiki Project';
-    
-    // Switch back to view mode
-    toggleEditMode();
+    // Fetch the markdown file
+    fetch(markdownPath)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to load content');
+            }
+            return response.text();
+        })
+        .then(markdownContent => {
+            // Parse the markdown content
+            parseAndRenderMarkdown(markdownContent);
+        })
+        .catch(error => {
+            console.error('Error loading content:', error);
+            document.getElementById('body').innerHTML = '<p>Error loading content. Please try again later.</p>';
+        });
 }
 
-// Cancel edit and revert to view mode without saving
-function cancelEdit() {
-    toggleEditMode();
-}
-
-// Load content from localStorage if available
-function loadContentFromStorage() {
-    const pageUrl = window.location.pathname;
-    const savedData = localStorage.getItem('wiki_page_' + pageUrl);
+// Parse markdown content and populate the page
+function parseAndRenderMarkdown(markdownContent) {
+    // Split the content to extract metadata and body
+    const contentParts = markdownContent.split('---');
     
-    if (savedData) {
-        const pageData = JSON.parse(savedData);
+    if (contentParts.length >= 3) {
+        // The content has front matter (metadata section between --- markers)
+        const metadata = parseYAMLFrontMatter(contentParts[1]);
+        const bodyMarkdown = contentParts.slice(2).join('---').trim();
         
-        // Update the view with saved data
-        document.getElementById('title').textContent = pageData.title;
-        document.getElementById('subtitle1').textContent = pageData.subtitle1;
-        document.getElementById('subtitle2').textContent = pageData.subtitle2;
-        document.getElementById('image').src = pageData.imageUrl;
-        document.getElementById('table-container').innerHTML = DOMPurify.sanitize(pageData.tableHTML);
+        // Update page with metadata
+        if (metadata.title) {
+            document.getElementById('title').textContent = metadata.title;
+            document.title = metadata.title + ' - Wiki Project';
+        }
+        
+        if (metadata.subtitle1) {
+            document.getElementById('subtitle1').textContent = metadata.subtitle1;
+        }
+        
+        if (metadata.subtitle2) {
+            document.getElementById('subtitle2').textContent = metadata.subtitle2;
+        }
+        
+        if (metadata.image) {
+            document.getElementById('image').src = metadata.image;
+            document.getElementById('image').alt = metadata.imageAlt || metadata.title;
+        }
+        
+        if (metadata.table) {
+            document.getElementById('table-container').innerHTML = DOMPurify.sanitize(metadata.table);
+        }
         
         // Convert Markdown to HTML for the body
-        const bodyHTML = DOMPurify.sanitize(marked.parse(pageData.bodyMarkdown));
+        const bodyHTML = DOMPurify.sanitize(marked.parse(bodyMarkdown));
         document.getElementById('body').innerHTML = bodyHTML;
-        
-        // Update document title
-        document.title = pageData.title + ' - Wiki Project';
+    } else {
+        // No front matter, treat the entire content as body
+        const bodyHTML = DOMPurify.sanitize(marked.parse(markdownContent));
+        document.getElementById('body').innerHTML = bodyHTML;
     }
+    
+    // Remove the edit button since it's no longer needed
+    const editButton = document.querySelector('.edit-button');
+    if (editButton) {
+        editButton.remove();
+    }
+    
+    // Hide the edit mode section
+    const editMode = document.getElementById('edit-mode');
+    if (editMode) {
+        editMode.style.display = 'none';
+    }
+}
+
+// Simple YAML front matter parser
+function parseYAMLFrontMatter(yamlString) {
+    const metadata = {};
+    const lines = yamlString.trim().split('\n');
+    
+    lines.forEach(line => {
+        if (line.includes(':')) {
+            const [key, value] = line.split(':');
+            if (key && value) {
+                metadata[key.trim()] = value.trim();
+            }
+        }
+    });
+    
+    return metadata;
 }
