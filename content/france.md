@@ -2,7 +2,7 @@
 title: France
 subtitle1: Geography and Demographics
 subtitle2: History and Culture
-image: https://via.placeholder.com/800x400
+image: https://example.com/images/france-map.jpg
 imageAlt: Map of France
 table: <table><thead><tr><th>Attribute</th><th>Value</th></tr></thead><tbody><tr><td>Capital</td><td>Paris</td></tr><tr><td>Official Language</td><td>French</td></tr><tr><td>Population</td><td>67.5 million (2024)</td></tr><tr><td>Currency</td><td>Euro (€)</td></tr><tr><td>Government</td><td>Unitary semi-presidential republic</td></tr></tbody></table>
 ---
