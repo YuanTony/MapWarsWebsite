@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japan - Wiki Project</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.4.0/purify.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><a href="../../index.html">Wiki Project</a></h1>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Countries</a>
+                        <div class="dropdown-content">
+                            <a href="country1.html">France</a>
+                            <a href="country2.html">Japan</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Meta</a>
+                        <div class="dropdown-content">
+                            <a href="../meta/rules.html">Rules</a>
+                            <a href="../meta/about.html">About</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="wiki-content">
+            <button class="edit-button" onclick="toggleEditMode()">Edit Page</button>
+            
+            <!-- View Mode -->
+            <div id="view-mode">
+                <h1 id="title" class="wiki-title">Japan</h1>
+                <h2 id="subtitle1" class="wiki-subtitle">Geography and Society</h2>
+                <h2 id="subtitle2" class="wiki-subtitle">History and Culture</h2>
+                
+                <div id="image-container">
+                    <img id="image" src="https://via.placeholder.com/800x400" alt="Map of Japan" class="wiki-image">
+                </div>
+                
+                <div id="table-container">
+                    <table id="table" class="wiki-table">
+                        <thead>
+                            <tr>
+                                <th>Attribute</th>
+                                <th>Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Capital</td>
+                                <td>Tokyo</td>
+                            </tr>
+                            <tr>
+                                <td>Official Language</td>
+                                <td>Japanese</td>
+                            </tr>
+                            <tr>
+                                <td>Population</td>
+                                <td>125.7 million (2024)</td>
+                            </tr>
+                            <tr>
+                                <td>Currency</td>
+                                <td>Japanese yen (¥)</td>
+                            </tr>
+                            <tr>
+                                <td>Government</td>
+                                <td>Unitary parliamentary constitutional monarchy</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div id="body" class="wiki-body">
+                    <p>Japan is an island country in East Asia. It is situated in the northwest Pacific Ocean and is bordered by the Sea of Japan to the west and extends from the Sea of Okhotsk in the north to the East China Sea in the south.</p>
+                    
+                    <h3>Geography</h3>
+                    <p>Japan comprises four main islands: Honshu, Hokkaido, Kyushu, and Shikoku, along with more than 6,000 smaller islands. About 73% of Japan's land area is mountainous, with a series of mountain ranges running through each of the main islands. Mount Fuji, Japan's highest peak, is an active volcano and a symbol of the country.</p>
+                    
+                    <h3>Society</h3>
+                    <p>Japan has one of the world's highest life expectancies and is notable for its highly educated and skilled workforce. Japanese society values harmony, respect for tradition, and a strong work ethic. The country faces challenges related to an aging population and low birth rate.</p>
+                    
+                    <h3>Culture</h3>
+                    <p>Japanese culture has evolved greatly over millennia, from the country's prehistoric Jōmon period to its contemporary modern culture, which combines influences from Asia, Europe, and North America. Traditional arts include crafts such as ceramics, textiles, lacquerware, swords and dolls; performances of bunraku, kabuki, noh, dance, and rakugo; and other practices, the tea ceremony, ikebana, martial arts, calligraphy, origami, onsen, and games.</p>
+                    
+                    <h3>Economy</h3>
+                    <p>Japan has the world's third-largest economy by nominal GDP and is among the world's largest and most technologically advanced producers of motor vehicles, machinery, and electronic equipment. The country's service sector accounts for three quarters of the gross domestic product.</p>
+                </div>
+            </div>
+            
+            <!-- Edit Mode -->
+            <div id="edit-mode" class="edit-section">
+                <h3>Edit Page Content</h3>
+                
+                <label for="edit-title">Title:</label>
+                <input type="text" id="edit-title" class="edit-field" value="Japan">
+                
+                <label for="edit-subtitle1">Subtitle 1:</label>
+                <input type="text" id="edit-subtitle1" class="edit-field" value="Geography and Society">
+                
+                <label for="edit-subtitle2">Subtitle 2:</label>
+                <input type="text" id="edit-subtitle2" class="edit-field" value="History and Culture">
+                
+                <label for="edit-image">Image URL:</label>
+                <input type="text" id="edit-image" class="edit-field" value="https://via.placeholder.com/800x400">
+                
+                <label for="edit-table">Table (HTML):</label>
+                <textarea id="edit-table" class="edit-field">
+<table>
+    <thead>
+        <tr>
+            <th>Attribute</th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Capital</td>
+            <td>Tokyo</td>
+        </tr>
+        <tr>
+            <td>Official Language</td>
+            <td>Japanese</td>
+        </tr>
+        <tr>
+            <td>Population</td>
+            <td>125.7 million (2024)</td>
+        </tr>
+        <tr>
+            <td>Currency</td>
+            <td>Japanese yen (¥)</td>
+        </tr>
+        <tr>
+            <td>Government</td>
+            <td>Unitary parliamentary constitutional monarchy</td>
+        </tr>
+    </tbody>
+</table>
+                </textarea>
+                
+                <label for="edit-body">Body (Markdown):</label>
+                <textarea id="edit-body" class="edit-field">
+Japan is an island country in East Asia. It is situated in the northwest Pacific Ocean and is bordered by the Sea of Japan to the west and extends from the Sea of Okhotsk in the north to the East China Sea in the south.
+
+### Geography
+Japan comprises four main islands: Honshu, Hokkaido, Kyushu, and Shikoku, along with more than 6,000 smaller islands. About 73% of Japan's land area is mountainous, with a series of mountain ranges running through each of the main islands. Mount Fuji, Japan's highest peak, is an active volcano and a symbol of the country.
+
+### Society
+Japan has one of the world's highest life expectancies and is notable for its highly educated and skilled workforce. Japanese society values harmony, respect for tradition, and a strong work ethic. The country faces challenges related to an aging population and low birth rate.
+
+### Culture
+Japanese culture has evolved greatly over millennia, from the country's prehistoric Jōmon period to its contemporary modern culture, which combines influences from Asia, Europe, and North America. Traditional arts include crafts such as ceramics, textiles, lacquerware, swords and dolls; performances of bunraku, kabuki, noh, dance, and rakugo; and other practices, the tea ceremony, ikebana, martial arts, calligraphy, origami, onsen, and games.
+
+### Economy
+Japan has the world's third-largest economy by nominal GDP and is among the world's largest and most technologically advanced producers of motor vehicles, machinery, and electronic equipment. The country's service sector accounts for three quarters of the gross domestic product.
+                </textarea>
+                
+                <button class="save-button" onclick="saveChanges()">Save Changes</button>
+                <button class="cancel-button" onclick="cancelEdit()">Cancel</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Wiki Project. All content available under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> unless otherwise noted.</p>
+        </footer>
+    </div>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/wiki-page.js"></script>
+</body>
+</html>
