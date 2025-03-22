@@ -37,7 +37,6 @@ function loadCountryContent(country) {
                 throw new Error(`Failed to load content for ${countryName}`);
             }
             console.log(response);
-            console.log(response.body());
             console.log(response.text());
             return response.text();
         })
