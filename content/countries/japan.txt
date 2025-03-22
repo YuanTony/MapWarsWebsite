@@ -1,0 +1,19 @@
+---
+title: Japan
+subtitle1: Geography and Demographics
+subtitle2: History and Culture
+image: https://example.com/images/japan-map.jpg
+imageAlt: Map of Japan
+table: <table><thead><tr><th>Attribute</th><th>Value</th></tr></thead><tbody><tr><td>Capital</td><td>Tokyo</td></tr><tr><td>Official Language</td><td>Japanese</td></tr><tr><td>Population</td><td>125.7 million (2024)</td></tr><tr><td>Currency</td><td>Japanese Yen (¥)</td></tr><tr><td>Government</td><td>Unitary parliamentary constitutional monarchy</td></tr></tbody></table>
+---
+
+Japan is an island country in East Asia, located in the northwest Pacific Ocean. It is bordered by the Sea of Japan to the west and the Pacific Ocean to the east, and spans from the Sea of Okhotsk in the north to the East China Sea in the southwest.
+
+### Geography
+Japan consists of four main islands (Honshu, Hokkaido, Kyushu, and Shikoku) and numerous smaller islands. The country features diverse landscapes including mountains, forests, and coastal plains. Mount Fuji, the highest peak in Japan at 3,776 meters, is an iconic symbol of the country. Japan has a temperate climate with four distinct seasons, though it varies considerably from the cool northern region of Hokkaido to the subtropical islands of Okinawa.
+
+### Culture
+Japan has a rich cultural heritage that combines ancient traditions with modern innovations. The country is known for its unique art forms such as ikebana (flower arrangement), origami, calligraphy, and traditional performances like Noh and Kabuki theater. Japanese cuisine, including sushi, ramen, and tempura, has gained international popularity. The concept of "wabi-sabi" (finding beauty in imperfection) and a strong sense of social harmony are important aspects of Japanese culture.
+
+### Economy
+Japan has one of the largest economies in the world, known for its technological innovation, manufacturing, and exports. Major industries include automotive, electronics, robotics, and precision machinery. Japan has overcome limited natural resources through technological innovation and a highly skilled workforce. The country is home to many globally recognized brands such as Toyota, Sony, Nintendo, and Canon.
