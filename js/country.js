@@ -62,7 +62,6 @@ function displayError(message) {
     document.getElementById('subtitle1').textContent = '';
     document.getElementById('subtitle2').textContent = '';
     document.getElementById('image-container').style.display = 'none';
-    document.getElementById('table-container').style.display = 'none';
     document.getElementById('body').innerHTML = `<p class="error-message">${message}</p>`;
 }
 
@@ -101,13 +100,6 @@ function parseAndRenderMarkdown(markdownContent, countryName) {
             document.getElementById('image-container').style.display = 'none';
         }
         
-        if (metadata.table) {
-            document.getElementById('table-container').innerHTML = DOMPurify.sanitize(metadata.table);
-            document.getElementById('table-container').style.display = 'block';
-        } else {
-            document.getElementById('table-container').style.display = 'none';
-        }
-        
         // Convert Markdown to HTML for the body
         const bodyHTML = DOMPurify.sanitize(marked.parse(bodyMarkdown));
         document.getElementById('body').innerHTML = bodyHTML;
@@ -117,7 +109,6 @@ function parseAndRenderMarkdown(markdownContent, countryName) {
         document.getElementById('subtitle1').textContent = '';
         document.getElementById('subtitle2').textContent = '';
         document.getElementById('image-container').style.display = 'none';
-        document.getElementById('table-container').style.display = 'none';
         
         const bodyHTML = DOMPurify.sanitize(marked.parse(markdownContent));
         document.getElementById('body').innerHTML = bodyHTML;
