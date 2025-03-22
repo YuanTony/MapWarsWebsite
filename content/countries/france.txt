@@ -9,8 +9,6 @@ imageAlt: Flag of France
 
 France, officially the French Republic, is a country located in Western Europe. It shares borders with Belgium, Luxembourg, Germany, Switzerland, Italy, Monaco, Andorra, and Spain. France also has overseas territories across the world.
 
-Here's the HTML table converted to markdown format:
-
 | Key facts |       |
 |-----------|-------|
 | Capital | Paris |
