@@ -25,7 +25,7 @@ function loadCountryContent(country) {
     }
     
     // Construct the path to the markdown file (in content/countries folder)
-    const markdownPath = `../content/countries/${countryName}.md`;
+    const markdownPath = `../content/countries/${countryName}.txt`;
     
     // Update page title to show which country is being loaded
     document.title = `${countryName.charAt(0).toUpperCase() + countryName.slice(1)} - Wiki Project`;
