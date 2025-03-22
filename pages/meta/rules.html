@@ -12,6 +12,7 @@
     <div class="container">
         <header>
             <h1><a href="../../index.html">Wiki Project</a></h1>
+            <!--
             <nav>
                 <ul>
                     <li class="dropdown">
@@ -30,12 +31,10 @@
                     </li>
                 </ul>
             </nav>
+            -->
         </header>
 
         <main class="wiki-content">
-            <button class="edit-button" onclick="toggleEditMode()">Edit Page</button>
-            
-            <!-- View Mode -->
             <div id="view-mode">
                 <h1 id="title" class="wiki-title">Rules and Guidelines</h1>
                 <h2 id="subtitle1" class="wiki-subtitle">Content Policies</h2>
@@ -117,98 +116,7 @@
                     <p>These guidelines may be updated periodically. Contributors are expected to review them regularly.</p>
                 </div>
             </div>
-            
-            <!-- Edit Mode -->
-            <div id="edit-mode" class="edit-section">
-                <h3>Edit Page Content</h3>
-                
-                <label for="edit-title">Title:</label>
-                <input type="text" id="edit-title" class="edit-field" value="Rules and Guidelines">
-                
-                <label for="edit-subtitle1">Subtitle 1:</label>
-                <input type="text" id="edit-subtitle1" class="edit-field" value="Content Policies">
-                
-                <label for="edit-subtitle2">Subtitle 2:</label>
-                <input type="text" id="edit-subtitle2" class="edit-field" value="Editing Standards">
-                
-                <label for="edit-image">Image URL:</label>
-                <input type="text" id="edit-image" class="edit-field" value="https://via.placeholder.com/800x400">
-                
-                <label for="edit-table">Table (HTML):</label>
-                <textarea id="edit-table" class="edit-field">
-<table>
-    <thead>
-        <tr>
-            <th>Policy</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Neutral Point of View</td>
-            <td>All articles must be written from a neutral point of view, representing significant views fairly and without bias.</td>
-        </tr>
-        <tr>
-            <td>Verifiability</td>
-            <td>Content must be attributable to reliable, published sources.</td>
-        </tr>
-        <tr>
-            <td>No Original Research</td>
-            <td>Articles may not contain previously unpublished arguments, concepts, data, or theories.</td>
-        </tr>
-        <tr>
-            <td>Civility</td>
-            <td>Interact with others in a respectful and civil manner.</td>
-        </tr>
-        <tr>
-            <td>Assume Good Faith</td>
-            <td>Assume that other editors are trying to help the project, not harm it.</td>
-        </tr>
-    </tbody>
-</table>
-                </textarea>
-                
-                <label for="edit-body">Body (Markdown):</label>
-                <textarea id="edit-body" class="edit-field">
-### Content Guidelines
-Our wiki project follows several core principles to ensure high-quality, reliable content. These are non-negotiable standards that all contributors must follow:
-
-#### Neutral Point of View
-All wiki articles must be written from a neutral point of view (NPOV), representing all significant viewpoints fairly, proportionately, and without bias. Articles should not advocate or persuade; they should explain.
-
-#### Verifiability
-The threshold for inclusion in this wiki is verifiability, not truth. This means all content must be attributable to reliable, published sources. Editors should provide citations for any challenged material and for any material that is likely to be challenged.
-
-#### No Original Research
-The wiki does not publish original research. This includes unpublished theories, data, statements, concepts, arguments, or ideas; or any new analysis or synthesis of published material that serves to advance a position.
-
-### Editing Behavior
-How editors interact with each other is as important as the content itself:
-
-#### Civility
-Treat others with respect. Do not make personal attacks or engage in harassment. Focus on content, not on fellow editors.
-
-#### Assume Good Faith
-Unless there is clear evidence to the contrary, assume that people who work on the project are trying to help it, not hurt it.
-
-#### Consensus
-Decisions are made by consensus, not by majority vote, popularity, or loudness of voices. When in doubt, discuss on the talk page before making significant changes.
-
-### Formatting Standards
-For consistency across articles, please follow these formatting guidelines:
-
-- Use proper section headings (h2 for main sections, h3 for subsections, etc.)
-- Include citations after statements that require verification
-- Structure articles with a clear introduction, body, and conclusion when appropriate
-- Use tables for presenting structured data
-- Include relevant images with proper captions
-
-These guidelines may be updated periodically. Contributors are expected to review them regularly.
-                </textarea>
-                
-                <button class="save-button" onclick="saveChanges()">Save Changes</button>
-                <button class="cancel-button" onclick="cancelEdit()">Cancel</button>
-            </div>
+        
         </main>
 
         <footer>
