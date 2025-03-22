@@ -36,10 +36,12 @@ function loadCountryContent(country) {
             if (!response.ok) {
                 throw new Error(`Failed to load content for ${countryName}`);
             }
+            console.log(response);
             return response.text();
         })
         .then(markdownContent => {
             // Parse the markdown content
+            console.log(markdownContent);
             parseAndRenderMarkdown(markdownContent, countryName);
         })
         .catch(error => {
@@ -66,7 +68,6 @@ function displayError(message) {
 
 // Parse markdown content and populate the page
 function parseAndRenderMarkdown(markdownContent, countryName) {
-    console.log(markdownContent);
     // Split the content to extract metadata and body
     const contentParts = markdownContent.split('---');
     
@@ -74,8 +75,6 @@ function parseAndRenderMarkdown(markdownContent, countryName) {
         // The content has front matter (metadata section between --- markers)
         const metadata = parseYAMLFrontMatter(contentParts[1]);
         const bodyMarkdown = contentParts.slice(2).join('---').trim();
-
-        console.log(metadata);
         
         // Update page with metadata
         if (metadata.title) {
