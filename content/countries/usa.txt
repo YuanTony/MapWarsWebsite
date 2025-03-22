@@ -1,0 +1,19 @@
+---
+title: United States of America
+subtitle1: Geography and Demographics
+subtitle2: History and Culture
+image: ../content/countries/usa.jpg
+imageAlt: Flag of the United States
+table: <table><thead><tr><th>Attribute</th><th>Value</th></tr></thead><tbody><tr><td>Capital</td><td>Washington, D.C.</td></tr><tr><td>Official Language</td><td>None at federal level (English de facto)</td></tr><tr><td>Population</td><td>334.2 million (2024)</td></tr><tr><td>Currency</td><td>United States Dollar ($)</td></tr><tr><td>Government</td><td>Federal presidential constitutional republic</td></tr></tbody></table>
+---
+
+The United States of America (USA), commonly known as the United States (U.S.) or America, is a country primarily located in North America. It consists of 50 states, a federal district (Washington, D.C.), five major unincorporated territories, and numerous possessions.
+
+### Geography
+The United States is the world's third-largest country by total area, spanning 9.8 million square kilometers. It features extremely diverse geography, ecosystems, and wildlife. The country includes mountains, plains, deserts, coastal regions, forests, and tundra. Major mountain ranges include the Rocky Mountains in the west and the Appalachian Mountains in the east. The central portion contains the Great Plains, while Alaska features arctic tundra and Hawaii consists of tropical islands. The climate varies widely across the vast territory, from tropical in Hawaii and southern Florida to tundra in northern Alaska.
+
+### Culture
+American culture is remarkably diverse, reflecting the nation's history of immigration and its multicultural heritage. Often described as a "melting pot" or "cultural mosaic," the United States has been shaped by Native American, European, African, Asian, and Latin American influences. The country has produced influential contributions to literature, film, music, art, and technology. American popular culture, including Hollywood films, television programs, and music, has significant global influence. Regional cultural variations exist throughout the country, from the Deep South to New England, the Midwest to the Pacific Northwest.
+
+### Economy
+The United States has the world's largest economy by nominal GDP, characterized by a highly developed free-market system. Services form the largest sector, followed by manufacturing, though the country remains an agricultural powerhouse. The U.S. is home to the world's largest financial markets and the headquarters of many global corporations like Apple, Amazon, Microsoft, and Google. American innovation has driven technological development worldwide, particularly in computing, aerospace, pharmaceuticals, and artificial intelligence. The country maintains the world's highest research and development spending and leads in many scientific fields.
