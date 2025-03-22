@@ -1,13 +1,20 @@
+
 ---
 title: Germany
 subtitle1: Geography and Demographics
 subtitle2: History and Culture
 image: ../content/countries/germany.jpg
 imageAlt: Flag of Germany
-table: <table><thead><tr><th>Attribute</th><th>Value</th></tr></thead><tbody><tr><td>Capital</td><td>Berlin</td></tr><tr><td>Official Language</td><td>German</td></tr><tr><td>Population</td><td>83.2 million (2024)</td></tr><tr><td>Currency</td><td>Euro (€)</td></tr><tr><td>Government</td><td>Federal parliamentary republic</td></tr></tbody></table>
 ---
 
 Germany, officially the Federal Republic of Germany, is a country in Central Europe. It is bordered by Denmark to the north, Poland and the Czech Republic to the east, Austria and Switzerland to the south, and France, Luxembourg, Belgium, and the Netherlands to the west.
+
+|-----------|-------|
+| Capital | Berlin |
+| Official Language | German |
+| Population | 83.2 million (2024) |
+| Currency | Euro (€) |
+| Government | Federal parliamentary republic |
 
 ### Geography
 Germany's territory covers 357,022 square kilometers and features a diverse landscape. The country stretches from the North and Baltic Seas in the north to the Alps in the south. Major geographical regions include the North German Plain, the Central German Uplands, and the Alpine Foreland. Germany has a temperate seasonal climate influenced by the Atlantic Ocean. The country is crossed by several major rivers including the Rhine, Danube, and Elbe.
