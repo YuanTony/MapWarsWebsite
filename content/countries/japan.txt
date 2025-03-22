@@ -1,13 +1,20 @@
+
 ---
 title: Japan
 subtitle1: Geography and Demographics
 subtitle2: History and Culture
 image: ../content/countries/japan.jpg
 imageAlt: Flag of Japan
-table: <table><thead><tr><th>Attribute</th><th>Value</th></tr></thead><tbody><tr><td>Capital</td><td>Tokyo</td></tr><tr><td>Official Language</td><td>Japanese</td></tr><tr><td>Population</td><td>125.7 million (2024)</td></tr><tr><td>Currency</td><td>Japanese Yen (¥)</td></tr><tr><td>Government</td><td>Unitary parliamentary constitutional monarchy</td></tr></tbody></table>
 ---
 
 Japan is an island country in East Asia, located in the northwest Pacific Ocean. It is bordered by the Sea of Japan to the west and the Pacific Ocean to the east, and spans from the Sea of Okhotsk in the north to the East China Sea in the southwest.
+
+|-----------|-------|
+| Capital | Tokyo |
+| Official Language | Japanese |
+| Population | 125.7 million (2024) |
+| Currency | Japanese Yen (¥) |
+| Government | Unitary parliamentary constitutional monarchy |
 
 ### Geography
 Japan consists of four main islands (Honshu, Hokkaido, Kyushu, and Shikoku) and numerous smaller islands. The country features diverse landscapes including mountains, forests, and coastal plains. Mount Fuji, the highest peak in Japan at 3,776 meters, is an iconic symbol of the country. Japan has a temperate climate with four distinct seasons, though it varies considerably from the cool northern region of Hokkaido to the subtropical islands of Okinawa.
