@@ -12,6 +12,7 @@
     <div class="container">
         <header>
             <h1><a href="../../index.html">Wiki Project</a></h1>
+            <!--
             <nav>
                 <ul>
                     <li class="dropdown">
@@ -30,11 +31,10 @@
                     </li>
                 </ul>
             </nav>
+            -->
         </header>
 
         <main class="wiki-content">
-            <button class="edit-button" onclick="toggleEditMode()">Edit Page</button>
-            
             <!-- View Mode -->
             <div id="view-mode">
                 <h1 id="title" class="wiki-title">About This Wiki</h1>
@@ -123,98 +123,6 @@
                 </div>
             </div>
             
-            <!-- Edit Mode -->
-            <div id="edit-mode" class="edit-section">
-                <h3>Edit Page Content</h3>
-                
-                <label for="edit-title">Title:</label>
-                <input type="text" id="edit-title" class="edit-field" value="About This Wiki">
-                
-                <label for="edit-subtitle1">Subtitle 1:</label>
-                <input type="text" id="edit-subtitle1" class="edit-field" value="Mission and Vision">
-                
-                <label for="edit-subtitle2">Subtitle 2:</label>
-                <input type="text" id="edit-subtitle2" class="edit-field" value="Technical Infrastructure">
-                
-                <label for="edit-image">Image URL:</label>
-                <input type="text" id="edit-image" class="edit-field" value="https://via.placeholder.com/800x400">
-                
-                <label for="edit-table">Table (HTML):</label>
-                <textarea id="edit-table" class="edit-field">
-<table>
-    <thead>
-        <tr>
-            <th>Feature</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Technology</td>
-            <td>HTML, CSS, JavaScript, Markdown</td>
-        </tr>
-        <tr>
-            <td>Hosting</td>
-            <td>GitHub Pages</td>
-        </tr>
-        <tr>
-            <td>Editing</td>
-            <td>In-browser Markdown editor with HTML support</td>
-        </tr>
-        <tr>
-            <td>Storage</td>
-            <td>Client-side localStorage (browser storage)</td>
-        </tr>
-        <tr>
-            <td>License</td>
-            <td>Content: CC BY-SA 4.0, Code: MIT License</td>
-        </tr>
-    </tbody>
-</table>
-                </textarea>
-                
-                <label for="edit-body">Body (Markdown):</label>
-                <textarea id="edit-body" class="edit-field">
-### Our Mission
-This wiki project aims to create a collaborative knowledge base that is accessible, editable, and useful for everyone. We believe in the power of collective intelligence and the importance of sharing information freely.
-
-### History
-The Wiki Project was created in March 2025 as a lightweight alternative to traditional wiki systems. It was designed specifically to work with static hosting services like GitHub Pages, making it easy for individuals and small teams to create and maintain their own wiki without complex server setups.
-
-### How It Works
-Unlike traditional wiki systems that require server-side databases, this wiki uses client-side storage (localStorage) to save changes made by users in their own browsers. This means that:
-
-- Changes are saved in the user's browser
-- Edits are personal to each user and device
-- No account creation is necessary
-- No server-side processing is required
-
-For collaborative editing across multiple users, changes need to be manually shared and merged. This is typically done by having contributors submit their changes through GitHub pull requests, which can be reviewed and merged by maintainers.
-
-### Technology
-The wiki uses a combination of technologies:
-
-- **HTML/CSS/JavaScript**: Core foundation of the wiki
-- **Marked.js**: For rendering Markdown as HTML
-- **DOMPurify**: For sanitizing user-submitted HTML
-- **localStorage API**: For client-side storage of user edits
-
-### Contributing
-Anyone can contribute to this wiki by editing pages directly in the browser. For those familiar with GitHub, you can also fork the repository, make changes, and submit a pull request. Please review our [guidelines](rules.html) before contributing.
-
-### Future Development
-We're planning to add several features in the future:
-
-- Better handling of edit conflicts
-- Page history and versioning
-- Automatic link creation between pages
-- Improved media handling capabilities
-- Search functionality
-                </textarea>
-                
-                <button class="save-button" onclick="saveChanges()">Save Changes</button>
-                <button class="cancel-button" onclick="cancelEdit()">Cancel</button>
-            </div>
         </main>
 
         <footer>
