@@ -1,0 +1,19 @@
+---
+title: Germany
+subtitle1: Geography and Demographics
+subtitle2: History and Culture
+image: ../content/countries/germany.jpg
+imageAlt: Flag of Germany
+table: <table><thead><tr><th>Attribute</th><th>Value</th></tr></thead><tbody><tr><td>Capital</td><td>Berlin</td></tr><tr><td>Official Language</td><td>German</td></tr><tr><td>Population</td><td>83.2 million (2024)</td></tr><tr><td>Currency</td><td>Euro (€)</td></tr><tr><td>Government</td><td>Federal parliamentary republic</td></tr></tbody></table>
+---
+
+Germany, officially the Federal Republic of Germany, is a country in Central Europe. It is bordered by Denmark to the north, Poland and the Czech Republic to the east, Austria and Switzerland to the south, and France, Luxembourg, Belgium, and the Netherlands to the west.
+
+### Geography
+Germany's territory covers 357,022 square kilometers and features a diverse landscape. The country stretches from the North and Baltic Seas in the north to the Alps in the south. Major geographical regions include the North German Plain, the Central German Uplands, and the Alpine Foreland. Germany has a temperate seasonal climate influenced by the Atlantic Ocean. The country is crossed by several major rivers including the Rhine, Danube, and Elbe.
+
+### Culture
+German culture has been shaped by major intellectual and popular currents in Europe, both religious and secular. Germany has been home to influential artists, philosophers, musicians, and scientists including Goethe, Kant, Bach, Beethoven, and Einstein. The country is known for its rich literary, musical, and artistic traditions. German cuisine varies by region but often features bread, meat, and potatoes, with specialties like sausages, pretzels, and beer being internationally recognized. The annual Oktoberfest in Munich is the world's largest beer festival.
+
+### Economy
+Germany has the largest economy in Europe and the fourth-largest in the world. It is known for its highly skilled labor force, technological innovation, and export-oriented manufacturing sector. The country is a leading producer of automobiles, machinery, chemicals, and household equipment. Major companies headquartered in Germany include Volkswagen, Siemens, Allianz, and Deutsche Bank. Germany's "social market economy" balances free enterprise with social welfare programs and strong labor protections.
