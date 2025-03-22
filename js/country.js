@@ -66,6 +66,7 @@ function displayError(message) {
 
 // Parse markdown content and populate the page
 function parseAndRenderMarkdown(markdownContent, countryName) {
+    console.log(markdownContent);
     // Split the content to extract metadata and body
     const contentParts = markdownContent.split('---');
     
