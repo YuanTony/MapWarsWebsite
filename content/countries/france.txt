@@ -11,6 +11,7 @@ France, officially the French Republic, is a country located in Western Europe. 
 
 Here's the HTML table converted to markdown format:
 
+| Key facts |       |
 |-----------|-------|
 | Capital | Paris |
 | Official Language | French |
