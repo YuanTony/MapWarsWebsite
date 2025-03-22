@@ -73,6 +73,8 @@ function parseAndRenderMarkdown(markdownContent, countryName) {
         // The content has front matter (metadata section between --- markers)
         const metadata = parseYAMLFrontMatter(contentParts[1]);
         const bodyMarkdown = contentParts.slice(2).join('---').trim();
+
+        console.log(metadata);
         
         // Update page with metadata
         if (metadata.title) {
