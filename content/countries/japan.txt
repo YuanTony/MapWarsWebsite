@@ -2,8 +2,8 @@
 title: Japan
 subtitle1: Geography and Demographics
 subtitle2: History and Culture
-image: https://example.com/images/japan-map.jpg
-imageAlt: Map of Japan
+image: ../content/countries/japan.jpg
+imageAlt: Flag of Japan
 table: <table><thead><tr><th>Attribute</th><th>Value</th></tr></thead><tbody><tr><td>Capital</td><td>Tokyo</td></tr><tr><td>Official Language</td><td>Japanese</td></tr><tr><td>Population</td><td>125.7 million (2024)</td></tr><tr><td>Currency</td><td>Japanese Yen (¥)</td></tr><tr><td>Government</td><td>Unitary parliamentary constitutional monarchy</td></tr></tbody></table>
 ---
 
