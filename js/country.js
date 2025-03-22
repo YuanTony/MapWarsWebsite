@@ -37,11 +37,11 @@ function loadCountryContent(country) {
                 throw new Error(`Failed to load content for ${countryName}`);
             }
             console.log(response);
-            console.log(response.text());
             return response.text();
         })
         .then(markdownContent => {
             // Parse the markdown content
+            console.log(markdownContent);
             parseAndRenderMarkdown(markdownContent, countryName);
         })
         .catch(error => {
