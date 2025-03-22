@@ -9,6 +9,7 @@ imageAlt: Flag of Japan
 
 Japan is an island country in East Asia, located in the northwest Pacific Ocean. It is bordered by the Sea of Japan to the west and the Pacific Ocean to the east, and spans from the Sea of Okhotsk in the north to the East China Sea in the southwest.
 
+| Key facts |       |
 |-----------|-------|
 | Capital | Tokyo |
 | Official Language | Japanese |
