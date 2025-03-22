@@ -9,6 +9,7 @@ imageAlt: Flag of the United States
 
 The United States of America (USA), commonly known as the United States (U.S.) or America, is a country primarily located in North America. It consists of 50 states, a federal district (Washington, D.C.), five major unincorporated territories, and numerous possessions.
 
+| Key facts |       |
 |-----------|-------|
 | Capital | Washington, D.C. |
 | Official Language | None at federal level (English de facto) |
